@@ -6,7 +6,6 @@ import HeroContainer from './Components/HeroContainer';
 
 import './App.css';
 
-//https://www.digitalocean.com/community/tutorials/how-to-build-a-react-to-do-app-with-react-hooks
 
 
 function App(){
