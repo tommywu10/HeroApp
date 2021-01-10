@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Hero({hero, revealHero, index, removeHero}){
+function Hero({hero, revealHero, index, removeHero, primaryColor, secondaryColor}){
 
     return (
-        <div className="hero" style={hero.css}>
+        <div className="hero" style={ hero.isHardCoded ? hero.style : hero.bgStyle }>
             { hero.isRevealed ? hero.secretID : hero.name}
             <div className="button-container-hero">
                 <button id="reveal-button" onClick={() => revealHero(index)}>{hero.isRevealed ? "Unreveal" : "Reveal"}</button>

@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import '../App.css';
 
 export default function ColorForm( {primaryColor, setPrimaryColor, secondaryColor, setSecondaryColor}){
-
+    
     return (
     <div className="color-form-container">
         <p>Choose your hero's colors:</p>

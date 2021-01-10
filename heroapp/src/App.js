@@ -16,7 +16,8 @@ function App(){
       name: "Batman", 
       secretID: "Bruce Wayne",
       isRevealed: false,
-      css: {
+      isHardCoded: true,
+      style: {
         background: "linear-gradient(130deg, black 56.59%, yellow 57%)",
         color: "white",
       },
@@ -25,7 +26,8 @@ function App(){
       name: "Spider-Man", 
       secretID: "Peter Parker",
       isRevealed: false,
-      css: {
+      isHardCoded: true,
+      style: {
         background: "linear-gradient(130deg, red 56.59%, blue 57%)",
         color: "white",
       },
@@ -34,7 +36,8 @@ function App(){
       name: "Hulk", 
       secretID: "Eric Banner",
       isRevealed: false,
-      css: {
+      isHardCoded: true,
+      style: {
         background: "linear-gradient(130deg, green 56.59%, purple 57%)",
         color: "white",
       },
@@ -42,12 +45,15 @@ function App(){
 
   ])
 
-  
-  const addHero = (name, secretID, css) => {
-    const newHeroes = [...heroes, {name, secretID, css}]
-    setHeroes(newHeroes)
-  }
+  const [ primaryColor, setPrimaryColor ] = useState("#000000")
+  const [ secondaryColor, setSecondaryColor ] = useState("#000000")
 
+  const addHero = (name, secretID, primaryColor, secondaryColor, bgStyle) => {
+    const newHeroes = [...heroes, {name, secretID, primaryColor, secondaryColor, bgStyle}]
+    setHeroes(newHeroes)
+    
+  }
+  
   const revealHero = (index) => {
     const newHeroes = [...heroes]
 
@@ -67,21 +73,30 @@ function App(){
     newHeroes.splice(index, 1)
     setHeroes(newHeroes)
   }
+
+ 
   
   return(
     <div className="app">
       <Header />
 
-      {heroes.length === 0 ? <p>Please enter a name.</p> : <HeroContainer 
-        heroes={heroes}
-        revealHero={revealHero}
-        removeHero={removeHero}
+      {heroes.length === 0 ? <p>Please enter a name.</p> : 
+        <HeroContainer 
+          heroes={heroes}
+          revealHero={revealHero}
+          removeHero={removeHero}
+          primaryColor={primaryColor}
+          secondaryColor={secondaryColor}
       />}
 
 
       <Form
         addHero={addHero}
         heroes={heroes}
+        primaryColor={primaryColor}
+        setPrimaryColor={setPrimaryColor}
+        secondaryColor={secondaryColor}
+        setSecondaryColor={setSecondaryColor}
       />
     </div>
   )
