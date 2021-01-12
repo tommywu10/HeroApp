@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Hero({hero, revealHero, index, removeHero, primaryColor, secondaryColor}){
+function Hero({hero, revealHero, index, removeHero}){
 
     return (
         <div className="hero" style={ hero.isHardCoded ? hero.style : hero.bgStyle }>

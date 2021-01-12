@@ -47,6 +47,7 @@ function App(){
 
   const [ primaryColor, setPrimaryColor ] = useState("#000000")
   const [ secondaryColor, setSecondaryColor ] = useState("#000000")
+  const [ nameColor, setNameColor ] = useState("")
 
   const addHero = (name, secretID, primaryColor, secondaryColor, bgStyle) => {
     const newHeroes = [...heroes, {name, secretID, primaryColor, secondaryColor, bgStyle}]
@@ -97,6 +98,8 @@ function App(){
         setPrimaryColor={setPrimaryColor}
         secondaryColor={secondaryColor}
         setSecondaryColor={setSecondaryColor}
+        nameColor={nameColor}
+        setNameColor={setNameColor}
       />
     </div>
   )

@@ -82,7 +82,7 @@ header h1 {
 .form-container button {
   width: 100%;
   padding: 3px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   font-size: 14px;
   text-align: center;
 }
@@ -110,4 +110,9 @@ header h1 {
 
 .color-form-input input {
   width: 10%;
+}
+
+.color-form-container select {
+  padding: 5px;
+  margin-bottom: 10px;
 }

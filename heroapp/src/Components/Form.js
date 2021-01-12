@@ -4,13 +4,14 @@ import ColorForm from '../Components/ColorForm'
 import Modal from '../Components/Modal'
 import '../App.css';
 
-function Form({addHero, heroes, primaryColor, secondaryColor, setPrimaryColor, setSecondaryColor, addColor}){
+function Form({addHero, heroes, primaryColor, secondaryColor, setPrimaryColor, setSecondaryColor, addColor, nameColor, setNameColor}){
 
     const [ nameValue, setNameValue ] = useState("")
     const [ secretIDValue, setSecretIDValue ] = useState("")
 
     const bgStyle = {
-        background: `linear-gradient(130deg, ${primaryColor} 56.59%, ${secondaryColor} 57%)`
+        background: `linear-gradient(130deg, ${primaryColor} 56.59%, ${secondaryColor} 57%)`,
+        color: `${nameColor}`
     }
     
     const handleSubmit = e => {
@@ -21,6 +22,7 @@ function Form({addHero, heroes, primaryColor, secondaryColor, setPrimaryColor, s
         setSecretIDValue("")
         setPrimaryColor("#000000")
         setSecondaryColor("#000000")
+        setNameColor("")
     }
 
     const handleAdd = (name, secretID) => {
@@ -30,6 +32,7 @@ function Form({addHero, heroes, primaryColor, secondaryColor, setPrimaryColor, s
         setSecretIDValue("")
         setPrimaryColor("#000000")
         setSecondaryColor("#000000")
+        setNameColor('')
     }
 
     return (
@@ -40,6 +43,8 @@ function Form({addHero, heroes, primaryColor, secondaryColor, setPrimaryColor, s
                 setPrimaryColor={setPrimaryColor}
                 secondaryColor={secondaryColor}
                 setSecondaryColor={setSecondaryColor}
+                nameColor={nameColor}
+                setNameColor={setNameColor}
             />
 
             <NameForm
