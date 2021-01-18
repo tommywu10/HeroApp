@@ -55,7 +55,7 @@ function Form({addHero, heroes, primaryColor, secondaryColor, setPrimaryColor, s
                 setSecretIDValue={setSecretIDValue}
                 handleAdd={handleAdd}
             />
-            
+
         </div>
     )
     

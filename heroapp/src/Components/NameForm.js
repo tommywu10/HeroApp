@@ -19,8 +19,10 @@ export default function NameForm({ handleSubmit, setNameValue, nameValue, secret
                         placeholder="Enter Secret ID"
                         />
                 </div>
-                <button onClick={() => handleAdd}>Add Hero</button>
+                <button disabled={!nameValue || !secretIDValue} onClick={() => handleAdd}>Add Hero</button>
             </form>
-    </div>
+        </div>
+
+        
     )
 }
