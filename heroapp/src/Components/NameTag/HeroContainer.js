@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../Components/Hero';
+import Hero from './Hero';
 
 export default function HeroContainer( {heroes, revealHero, removeHero, primaryColor, secondaryColor}){
 

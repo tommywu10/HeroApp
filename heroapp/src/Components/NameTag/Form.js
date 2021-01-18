@@ -1,8 +1,7 @@
 import React, { useState }from 'react'
-import NameForm from '../Components/NameForm'
-import ColorForm from '../Components/ColorForm'
-import Modal from '../Components/Modal'
-import '../App.css';
+import NameForm from './NameForm'
+import ColorForm from './ColorForm'
+import '../style.css'
 
 function Form({addHero, heroes, primaryColor, secondaryColor, setPrimaryColor, setSecondaryColor, addColor, nameColor, setNameColor}){
 

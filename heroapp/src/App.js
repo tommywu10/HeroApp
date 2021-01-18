@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-import Form from './Components/Form';
-import Header from './Components/Header';
-import HeroContainer from './Components/HeroContainer';
+import Form from './Components/NameTag/Form';
+import Header from './Components/NameTag/Header';
+import HeroContainer from './Components/NameTag/HeroContainer';
+import HeroSearch from './Components/HeroSearch/HeroSearch';
 
 import './App.css';
 
@@ -101,6 +102,8 @@ function App(){
         nameColor={nameColor}
         setNameColor={setNameColor}
       />
+
+      <HeroSearch />
     </div>
   )
 }
