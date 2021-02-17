@@ -5,7 +5,7 @@ function Header(){
 
     return (
         <header>
-            <h1>Hero App</h1>
+            <h1>Customize Your Hero Tag</h1>
         </header>
     )
 }

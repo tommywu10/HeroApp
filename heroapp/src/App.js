@@ -125,9 +125,9 @@ useEffect(() => {
         setNameColor={setNameColor}
       />
 
-      <HeroSearch 
+      {/* <HeroSearch 
       heroData={heroData}
-      />
+      /> */}
     </div>
   )
 }
