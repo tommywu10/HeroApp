@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Form from './Components/NameTag/Form';
 import Header from './Components/NameTag/Header';
 import HeroContainer from './Components/NameTag/HeroContainer';
 import HeroSearch from './Components/HeroSearch/HeroSearch';
+import heroData from './data/all.json'
+
+import axios from 'axios'; 
 
 import './App.css';
 
@@ -47,7 +50,7 @@ function App(){
   ])
 
   const [ primaryColor, setPrimaryColor ] = useState("#000000")
-  const [ secondaryColor, setSecondaryColor ] = useState("#000000")
+  const [ secondaryColor, setSecondaryColor ] = useState("#FFFF00")
   const [ nameColor, setNameColor ] = useState("")
 
   const addHero = (name, secretID, primaryColor, secondaryColor, bgStyle) => {
@@ -76,8 +79,27 @@ function App(){
     setHeroes(newHeroes)
   }
 
- 
-  
+ //Hero Search functions -----------------------------------------------------------------------
+/* 
+const URL = `https://akabab.github.io/superhero-api/api`
+const proxyURL = "https://cors-anywhere.herokuapp.com/"
+ */
+
+ const [data, setData] = useState('')
+
+const getHeroes = () => {
+  axios.get(heroData)
+  .then((response) => {
+    const heroNames = response.data.name
+    setData(heroNames)
+  })
+  .catch(error => console.log('Error'))
+}
+
+useEffect(() => {
+  getHeroes()
+}, [])
+
   return(
     <div className="app">
       <Header />
@@ -103,7 +125,9 @@ function App(){
         setNameColor={setNameColor}
       />
 
-      <HeroSearch />
+      <HeroSearch 
+      heroData={heroData}
+      />
     </div>
   )
 }
