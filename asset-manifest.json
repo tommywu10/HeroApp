@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/HeroApp/static/css/main.88c87341.chunk.css",
+    "main.css": "/HeroApp/static/css/main.d38d3512.chunk.css",
     "main.js": "/HeroApp/static/js/main.9bf04b5a.chunk.js",
     "main.js.map": "/HeroApp/static/js/main.9bf04b5a.chunk.js.map",
     "runtime-main.js": "/HeroApp/static/js/runtime-main.50f95807.js",
@@ -10,13 +10,14 @@
     "static/js/3.59d49ebe.chunk.js": "/HeroApp/static/js/3.59d49ebe.chunk.js",
     "static/js/3.59d49ebe.chunk.js.map": "/HeroApp/static/js/3.59d49ebe.chunk.js.map",
     "index.html": "/HeroApp/index.html",
-    "static/css/main.88c87341.chunk.css.map": "/HeroApp/static/css/main.88c87341.chunk.css.map",
-    "static/js/2.7c4ae132.chunk.js.LICENSE.txt": "/HeroApp/static/js/2.7c4ae132.chunk.js.LICENSE.txt"
+    "static/css/main.d38d3512.chunk.css.map": "/HeroApp/static/css/main.d38d3512.chunk.css.map",
+    "static/js/2.7c4ae132.chunk.js.LICENSE.txt": "/HeroApp/static/js/2.7c4ae132.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/HeroApp/static/media/superhero-background-7216.7b03adc4.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.50f95807.js",
     "static/js/2.7c4ae132.chunk.js",
-    "static/css/main.88c87341.chunk.css",
+    "static/css/main.d38d3512.chunk.css",
     "static/js/main.9bf04b5a.chunk.js"
   ]
 }
