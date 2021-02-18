@@ -5,10 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('./superhero-background-7216.jpeg');
+  background-color: rgb(88, 88, 88);
+  background-blend-mode: multiply;
 }
 
 code {
